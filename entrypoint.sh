@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mount the encrypted volume to the temporary mount point
-veracrypt --text --non-interactive --password="$VERACRYPT_PASSWORD" /encrypted-file /encrypted-mount
+veracrypt --text --non-interactive --password="$VERACRYPT_PASSWORD" -m=nokernelcrypto /encrypted-file /encrypted-mount
 
 # Check if the SUBFOLDERS environment variable is set
 if [ -n "$SUBFOLDERS" ]; then
