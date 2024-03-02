@@ -4,7 +4,7 @@ FROM debian:bullseye-slim
 # Install necessary packages and VeraCrypt
 RUN apt-get update && \
     apt-get install -y wget gnupg && \
-    wget -q https://launchpad.net/veracrypt/trunk/1.24-update7/+download/veracrypt-1.24-Update7-Debian-11-amd64.deb -O veracrypt.deb && \
+    wget -q https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-console-1.26.7-Debian-11-arm64.deb -O veracrypt.deb && \
     wget -q https://www.idrix.fr/VeraCrypt/VeraCrypt_PGP_public_key.asc -O veracrypt.asc && \
     gpg --import veracrypt.asc && \
     gpg --verify veracrypt.deb && \
